@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --white: #fff;
+    --gy-light: rgb(134, 162, 165);
+    --gy-dark: rgb(42, 65, 68);
+    --gn-light: rgb(224, 241, 232);
+    --gn-dark: rgb(12, 125, 105);
+    --error: rgb(215, 60, 60);
+}
+
+.f-heading {
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+
+.f-bold {
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+
+.f-reg {
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
+.f-small {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+input,
+textarea,
+button {
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
