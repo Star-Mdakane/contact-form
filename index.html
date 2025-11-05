@@ -10,39 +10,75 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <title>Frontend Mentor | Contact form</title>
-
 </head>
 
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-
+  <main>
+    <div class="modal-container">
+      <div class="modal">
+        <img src="./assets/images/icon-success-check.svg" alt="success icon">
+        <h2>Message Sent!</h2>
+        <p>
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </div>
+    <section class="wrapper">
+      <div class="title">
+        <h1 class="f-heading">Contact Us</h1>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <div class="form-control">
+          <label class="f-small" for="firstname">First Name</label>
+          <span class="req">*</span>
+          <input type="text" name="firstname" id="firstname" required>
+          <span class="error" id="firstname-error">This field is required</span>
+        </div>
+        <div class="form-control">
+          <label class="f-small" for="lastname">Last Name</label>
+          <span class="req">*</span>
+          <input type="text" name="lastname" id="lastname" required>
+          <span class="error" id="lastname-error">This field is required</span>
+        </div>
+        <div class="form-control full">
+          <label for="email">First Name</label>
+          <span class="req">*</span>
+          <input type="email" name="email" id="email" required>
+          <span class="error" id="email-error">Please enter a valid email</span>
+        </div>
+        <fieldset class="full">
+          <legend>Query Type
+            <span class="req">*</span>
+          </legend>
+          <div class="query">
+            <input type="radio" name="query" id="general" value="general">
+            <label class="f-reg" for="general">General Enquiry</label>
+          </div>
+          <div class="query">
+            <input type="radio" name="query" id="support" value="support">
+            <label class="f-reg" for="support">Support Request</label>
+          </div>
+        </fieldset>
+        <span class="error" id="query-error">Please select a query type</span>
+        <div class="form-control full">
+          <label class="f-small" for="message">Message</label>
+          <span class="req">*</span>
+          <textarea class="msg" name="message" id="message" required></textarea>
+          <span class="error" id="message-error">This field is required</span>
+        </div>
+        <div class="form-control consent full">
+          <div class="select">
+            <input type="checkbox" name="consent" id="consent" required>
+            <label class="f-small" for="consent">I consent to being contacted by the team</label>
+          </div>
+          <span class="error" id="consent-error">
+            To submit this form, please consent to being contacted
+          </span>
+        </div>
+        <button class="f-bold" type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
 </body>
 
 </html>
