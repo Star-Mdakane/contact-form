@@ -78,8 +78,8 @@ textarea {
 }
 
 textarea {
-    height: 5lh;
-    resize: none;
+    min-height: 5lh;
+    resize: vertical;
 }
 
 button {
@@ -98,7 +98,7 @@ ul {
 }
 
 main {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -140,8 +140,6 @@ fieldset {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
-
-legend {}
 
 span.req {
     display: inline-block;
@@ -213,4 +211,18 @@ button[type='submit'] {
 
 button:hover {
     background-color: var(--gy-dark);
+}
+
+@media(max-width:600px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        height: 9lh;
+    }
 }
