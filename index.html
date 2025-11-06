@@ -16,35 +16,39 @@
   <main>
     <div class="modal-container">
       <div class="modal">
-        <img src="./assets/images/icon-success-check.svg" alt="success icon">
-        <h2>Message Sent!</h2>
-        <p>
-          Thanks for completing the form. We'll be in touch soon!
-        </p>
+        <div class="modal-content">
+          <div class="success">
+            <img src="./assets/images/icon-success-check.svg" alt="success icon">
+            <h2 class="f-bold">Message Sent!</h2>
+          </div>
+          <p class="f-small">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
       </div>
     </div>
     <section class="wrapper">
       <div class="title">
         <h1 class="f-heading">Contact Us</h1>
       </div>
-      <form id="contact-form" class="contact-form">
+      <form id="contact-form" class="contact-form" novalidate>
         <div class="form-control">
           <label class="f-small" for="firstname">First Name</label>
           <span class="req">*</span>
           <input type="text" name="firstname" id="firstname" required>
-          <span class="error" id="firstname-error">This field is required</span>
+          <span class="error-msg error" id="error-msg" data-for="firstname"></span>
         </div>
         <div class="form-control">
           <label class="f-small" for="lastname">Last Name</label>
           <span class="req">*</span>
           <input type="text" name="lastname" id="lastname" required>
-          <span class="error" id="lastname-error">This field is required</span>
+          <span class="error-msg error" id="error-msg" data-for="lastname"></span>
         </div>
         <div class="form-control full">
-          <label for="email">First Name</label>
+          <label for="email">Email</label>
           <span class="req">*</span>
           <input type="email" name="email" id="email" required>
-          <span class="error" id="email-error">Please enter a valid email</span>
+          <span class="error-msg error" id="error-msg" data-for="email"></span>
         </div>
         <fieldset class="full">
           <legend>Query Type
@@ -59,21 +63,19 @@
             <label class="f-reg" for="support">Support Request</label>
           </div>
         </fieldset>
-        <span class="error" id="query-error">Please select a query type</span>
+        <span class="error-msg error" id="error-msg" data-for="query"></span>
         <div class="form-control full">
           <label class="f-small" for="message">Message</label>
           <span class="req">*</span>
           <textarea class="msg" name="message" id="message" required></textarea>
-          <span class="error" id="message-error">This field is required</span>
+          <span class="error-msg error" id="error-msg" data-for="message"></span>
         </div>
         <div class="form-control consent full">
           <div class="select">
             <input type="checkbox" name="consent" id="consent" required>
             <label class="f-small" for="consent">I consent to being contacted by the team</label>
           </div>
-          <span class="error" id="consent-error">
-            To submit this form, please consent to being contacted
-          </span>
+          <span class="error-msg error" id="error-msg" data-for="consent"></span>
         </div>
         <button class="f-bold" type="submit">Submit</button>
       </form>

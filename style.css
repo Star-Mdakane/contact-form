@@ -95,7 +95,43 @@ ul {
 
 .modal-container {
     display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: auto;
+    z-index: 5;
 }
+
+.modal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    padding: 24px;
+}
+
+.modal-content {
+    background-color: var(--gy-dark);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--white);
+}
+
+.success {
+    display: flex;
+    gap: 8px;
+}
+
+.modal-content p {
+    color: var(--gn-light);
+}
+
 
 main {
     width: 100%;
